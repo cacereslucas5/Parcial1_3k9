@@ -24,7 +24,6 @@ repositories {
 dependencies {
 	//JPA
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.data:spring-data-jpa'
 
 	//SPRING WEB
 	implementation 'org.springframework.boot:spring-boot-starter-web'
@@ -35,20 +34,7 @@ dependencies {
 
 	//H2 DATABASE
 	runtimeOnly 'com.h2database:h2'
-	//junit
-	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
-	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
-	// Envers
-	implementation 'org.hibernate.orm:hibernate-envers:6.4.4.Final'
-	implementation 'org.hibernate:hibernate-core:7.0.0.Beta1'
-	// Spring Boot Starter Validation
-	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation', version: '3.2.5'
-	// mapstruct dtos y mapstruct integrado con lombok
-	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
-	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
-	annotationProcessor "org.projectlombok:lombok-mapstruct-binding:0.2.0"
-	// json
-	implementation 'org.json:json:20231013'
+
 
 	//MAPSTRUCT
 	implementation 'org.mapstruct:mapstruct:1.5.5.Final'

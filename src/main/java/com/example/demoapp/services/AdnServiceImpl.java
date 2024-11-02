@@ -2,7 +2,6 @@ package com.example.demoapp.services;
 
 import com.example.demoapp.dto.StatsDto;
 import com.example.demoapp.entities.Adn;
-import com.example.demoapp.entities.Analizador;
 import com.example.demoapp.repositories.AdnRepository;
 import com.example.demoapp.repositories.BaseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,10 +22,8 @@ public class AdnServiceImpl extends BaseServiceImpl<Adn, Long> implements AdnSer
     @Override
     public Adn saveAdn(List<String> adn) throws Exception {
         try{
-            Analizador analizador= new Analizador();
             Adn a= new Adn();
             a.setAdnList(adn);
-            a.setMutant(analizador.isMutant(adn));
             return adnRepository.save(a);
 
         } catch (Exception e) {
