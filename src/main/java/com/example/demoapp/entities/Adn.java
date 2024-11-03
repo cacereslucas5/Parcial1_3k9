@@ -29,7 +29,7 @@ public class Adn extends Base{
 
     private boolean isMutant;
 
-    public  void setAdnList(List<String> adnList){
+    public void setAdnList(List<String> adnList){
         this.adnList =String.join(",", adnList);
         this.isMutant =esMutante(adnList);
     }
@@ -43,7 +43,7 @@ public class Adn extends Base{
     }
 
 
-    public boolean esMutante(List<String> dna){
+    public static boolean esMutante(List<String> dna){
         if (dna==null || dna.size() == 0) {
             throw new IllegalArgumentException("La lista no puede ser vacia");
         }
